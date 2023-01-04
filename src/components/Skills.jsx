@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Portfolio = () => (
-  <PortfolioContainer id="portfolio">
+const Skills = () => (
+  <SkillsContainer id="skills">
     <div className="title">
-      <h2>My Portfolio</h2>
+      <h2>My Skills</h2>
     </div>
-  </PortfolioContainer>
+  </SkillsContainer>
 );
 
-const PortfolioContainer = styled.section`
+const SkillsContainer = styled.section`
   min-height: 100vh;
   padding: 100px 0;
   .title {
@@ -19,4 +19,4 @@ const PortfolioContainer = styled.section`
   }
 `;
 
-export default Portfolio;
+export default Skills;

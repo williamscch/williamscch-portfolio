@@ -5,46 +5,100 @@ import Burger from './Burger';
 
 const Nav = () => {
   const [clicked, setCLicked] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const handleClick = () => {
     setCLicked(!clicked);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY >= 64) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
   return (
-    <>
-      <NavContainer>
-        <ul className={`links ${clicked ? 'active' : ''}`}>
+    <NavContainer>
+      <div className={scrolled ? 'nav scroll' : 'nav'}>
+        <ul
+          className={`links ${clicked ? 'active' : ''}`}
+          onScroll={handleScroll}
+        >
           <li className="nav-item">
-            <Link to="/" spy smooth offset={50} duration={500}>
+            <Link to="home" spy hashSpy smooth delay={200} duration={600}>
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="services" spy smooth offset={50} duration={500}>
+            <Link
+              to="services"
+              spy
+              hashSpy
+              smooth
+              offset={-80}
+              delay={200}
+              duration={600}
+            >
               Services
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="about" spy smooth offset={50} duration={500}>
+            <Link
+              to="about"
+              spy
+              hashSpy
+              smooth
+              offset={-80}
+              delay={200}
+              duration={600}
+            >
               About
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="me" spy smooth offset={50} duration={500} className="me">
+            <a href="/" className="me">
               Me.
-            </Link>
+            </a>
           </li>
           <li className="nav-item">
-            <Link to="portfolio" spy smooth offset={50} duration={500}>
+            <Link
+              to="portfolio"
+              spy
+              smooth
+              hashSpy
+              offset={-80}
+              delay={200}
+              duration={600}
+            >
               Portfolio
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="skills" spy smooth offset={50} duration={500}>
+            <Link
+              to="skills"
+              spy
+              hashSpy
+              smooth
+              offset={-80}
+              delay={200}
+              duration={600}
+            >
               Skills
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="contact" spy smooth offset={50} duration={500}>
+            <Link
+              to="contact"
+              spy
+              hashSpy
+              smooth
+              offset={-80}
+              delay={200}
+              duration={600}
+            >
               Contact
             </Link>
           </li>
@@ -52,21 +106,33 @@ const Nav = () => {
         <div className="burger">
           <Burger clicked={clicked} handleClick={handleClick} />
         </div>
-      </NavContainer>
-    </>
+      </div>
+    </NavContainer>
   );
 };
 
 const NavContainer = styled.nav`
-  background-color: transparent;
-  position: fixed;
-  border-bottom: rgba(255, 255, 255, 0.7);
-  width: 100%;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  :hover {
+  .nav {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+  }
+
+  .nav:hover {
     background-color: white;
+    border-bottom: rgba(255, 255, 255, 0.7);
+    box-shadow: 4px 0 20px -5px rgb(0 0 0 / 10%);
+  }
+
+  .scroll {
+    background-color: white;
+    border-bottom: rgba(255, 255, 255, 0.7);
+    box-shadow: 4px 0 20px -5px rgb(0 0 0 / 10%);
+    height: 3rem;
   }
 
   .links {
@@ -75,21 +141,33 @@ const NavContainer = styled.nav`
     width: 100%;
   }
 
-  .nav-item {
+  .nav-item,
+  .me {
     text-decoration: none;
     list-style: none;
-    color: black;
     font-size: 1rem;
     cursor: pointer;
   }
 
   .nav-item .active {
-    color: yellow;
-    background-color: black;
+    color: var(--green);
+  }
+
+  .nav-item:hover {
+    color: var(--green);
+  }
+
+  .me:visited {
+    color: var(--green);
+  }
+
+  .me:hover {
+    color: var(--title);
   }
 
   .me {
     font-size: 1.5rem;
+    color: var(--green);
   }
 
   .links {
@@ -121,6 +199,7 @@ const NavContainer = styled.nav`
     right: 0;
     text-align: center;
   }
+
   .burger {
     @media (min-width: 768px) {
       display: none;
