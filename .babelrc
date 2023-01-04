@@ -1,7 +1,4 @@
 {
-    "presets": [
-        "@babel/preset-react"
-    ],
-    "plugins": ["@babel/plugin-syntax-jsx"]
-  }
-  
+  "presets": ["@babel/preset-react"],
+  "plugins": ["@babel/plugin-syntax-jsx", "babel-plugin-styled-components"]
+}
