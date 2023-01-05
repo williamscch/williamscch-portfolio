@@ -16,7 +16,6 @@ const AboutContainer = styled.section`
     width: 100%;
     display: grid;
     place-items: center;
-    
   }
 `;
 
