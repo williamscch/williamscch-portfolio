@@ -38,7 +38,7 @@ const Nav = () => {
               spy
               hashSpy
               smooth
-              offset={-80}
+              offset={-40}
               delay={200}
               duration={600}
             >
@@ -51,7 +51,7 @@ const Nav = () => {
               spy
               hashSpy
               smooth
-              offset={-80}
+              offset={0}
               delay={200}
               duration={600}
             >
@@ -69,7 +69,7 @@ const Nav = () => {
               spy
               smooth
               hashSpy
-              offset={-80}
+              offset={-40}
               delay={200}
               duration={600}
             >
@@ -82,7 +82,7 @@ const Nav = () => {
               spy
               hashSpy
               smooth
-              offset={-80}
+              offset={-40}
               delay={200}
               duration={600}
             >
@@ -95,7 +95,7 @@ const Nav = () => {
               spy
               hashSpy
               smooth
-              offset={-80}
+              offset={-40}
               delay={200}
               duration={600}
             >

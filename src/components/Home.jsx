@@ -7,7 +7,7 @@ const Home = () => (
   <HomeContainer id="home">
     <div>
       <h1>I&apos;m Williams Colmenares</h1>
-      <p>I&apos;m a Full-Stack Developer Based on Venezuela</p>
+      <p>A Full-Stack Web Developer Based on Venezuela</p>
       <button type="button">
         <Link
           to="portfolio"
