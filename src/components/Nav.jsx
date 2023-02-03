@@ -51,7 +51,7 @@ const Nav = () => {
               spy
               hashSpy
               smooth
-              offset={0}
+              offset={10}
               delay={200}
               duration={600}
             >
@@ -69,7 +69,7 @@ const Nav = () => {
               spy
               smooth
               hashSpy
-              offset={-40}
+              offset={-20}
               delay={200}
               duration={600}
             >
