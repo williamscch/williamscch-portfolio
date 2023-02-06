@@ -1,13 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
-const Contact = () => (
-  <ContactContainer id="contact">
-    <div className="title">
-      <h2>Contact Me</h2>
-    </div>
-  </ContactContainer>
-);
+const Contact = () => {
+  const { contact } = useSelector((state) => state);
+
+  return (
+    <ContactContainer id="contact">
+      <div className="title">
+        <h2>
+          Contact Me
+          {' '}
+          {contact.email}
+        </h2>
+      </div>
+      <footer />
+    </ContactContainer>
+  );
+};
 
 const ContactContainer = styled.section`
   min-height: 100vh;
