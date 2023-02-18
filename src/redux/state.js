@@ -117,7 +117,7 @@ const state = {
       languages: [],
       live: 'https://williamscch.github.io/tv-shows/dist/',
       source: 'https://github.com/williamscch/tv-shows',
-      image: '',
+      image: 'https://raw.githubusercontent.com/williamscch/tv-shows/development/app-ss.png',
     },
     {
       id: nextId('project-'),
@@ -137,7 +137,7 @@ const state = {
       languages: ['JavaScript', 'React', 'CSS'],
       live: 'https://williamscchmathmagicians.netlify.app/',
       source: 'https://github.com/williamscch/math-magicians',
-      image: '',
+      image: 'https://raw.githubusercontent.com/williamscch/math-magicians/development/app-ss.png',
     },
     {
       id: nextId('project-'),
@@ -147,7 +147,7 @@ const state = {
       languages: ['Javascript', 'CSS', 'HTML'],
       live: 'https://williamscch.github.io/to-do-list/dist/',
       source: 'https://github.com/williamscch/to-do-list',
-      image: '',
+      image: 'https://raw.githubusercontent.com/williamscch/to-do-list/master/app-ss.png',
     },
     {
       id: nextId('project-'),
@@ -157,7 +157,7 @@ const state = {
       languages: ['Javascript', 'CSS', 'HTML'],
       live: 'https://williamscch.github.io/pizza-restaurant-page/',
       source: 'https://github.com/williamscch/pizza-restaurant-page',
-      image: '',
+      image: 'https://raw.githubusercontent.com/williamscch/pizza-restaurant-page/master/assets/img/ss.png',
     },
   ],
   contact: {
