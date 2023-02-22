@@ -163,37 +163,37 @@ const state = {
   contact: {
     social: [
       {
-        id: 1,
+        id: nextId('social-'),
         name: 'Github',
         url: 'https://github.com/williamscch',
         icon: 'fa-brands fa-github',
       },
       {
-        id: 1,
+        id: nextId('social-'),
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/williamscolmenaresch',
         icon: 'fa-brands fa-linkedin-in',
       },
       {
-        id: 1,
+        id: nextId('social-'),
         name: 'Twitter',
         url: 'https://twitter.com/wdavidcch',
         icon: 'fa-brands fa-twitter',
       },
       {
-        id: 1,
+        id: nextId('social-'),
         name: 'Medium',
         url: 'https://medium.com/@williamscch',
         icon: 'fa-brands fa-medium',
       },
       {
-        id: 1,
+        id: nextId('social-'),
         name: 'Angellist',
         url: 'https://angel.co/williamscch',
         icon: 'fa-brands fa-angellist',
       },
       {
-        id: 1,
+        id: nextId('social-'),
         name: 'GitLab',
         url: 'https://gitlab.com/david.13.2121',
         icon: 'fa-brands fa-gitlab',
