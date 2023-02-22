@@ -26,6 +26,7 @@ const AboutContainer = styled.section`
   min-height: 100vh;
   max-height: 100vh;
   padding: 90px 6rem;
+  display: none;
 
   .title {
     text-align: start;

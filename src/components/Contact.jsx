@@ -7,11 +7,11 @@ const Contact = () => (
 
   <ContactContainer id="contact">
     <div className="title">
-      <h2>Contact Me</h2>
-      <h4>
+      <h2>Contact Form</h2>
+      <p>
         I&apos;m always interested in hearing about new projects, so if
         you&apos;d like to chat please get in touch.
-      </h4>
+      </p>
     </div>
     <form action="https://formspree.io/f/xlezzzro" method="POST" id="form">
       <input
@@ -20,7 +20,7 @@ const Contact = () => (
         name="full-name"
         required="required"
         maxLength="30"
-        placeholder="Full Name"
+        placeholder="Full name"
       />
 
       <input id="email" type="email" name="email" placeholder="Email address" />
@@ -29,12 +29,12 @@ const Contact = () => (
         id="text-area"
         name="message"
         maxLength="500"
-        placeholder="Enter text here"
+        placeholder="Type your message here"
         required
       />
 
       <div className="button-errormessage">
-        <button type="submit">Get in touch</button>
+        <button type="submit">Send Message</button>
 
         <small id="error-message" />
       </div>
@@ -42,59 +42,77 @@ const Contact = () => (
   </ContactContainer>
 );
 const ContactContainer = styled.section`
+  padding: 2.5rem 1.7rem;
   min-height: 100vh;
-  padding: 100px 0;
-
   display: flex;
   flex-direction: column;
-  padding: 0 24px;
 
   .title {
     width: 100%;
     display: grid;
     place-items: center;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: var(--fs-title);
+    }
+
+    h4 {
+    }
   }
+
   form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 44px;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
 
-form input {
-  height: 48px;
-  border-radius: 4px;
-  border: 1px solid var(--light-gray);
-  padding: 15px 16px;
-  transition: transform 1s;
-}
+    input {
+      height: 3rem;
+      border: none;
+      border-bottom: 1px solid var(--input);
+      padding: 15px 16px;
+      font-family: "Arbutus Slab", serif;
+      font-size: var(--subtitles-desktop);
+    }
 
-form input:hover {
-  transform: translate(15px, 15px);
-}
+    input:hover {
+      border-color: var(--green);
+    }
 
-form textarea {
-  height: 90px;
-  border-radius: 4px;
-  border: 1px solid var(--green);
-  padding: 12px;
-  transition: transform 1s;
-}
+    input:focus {
+      border-color: var(--title);
+      outline: none;
+    }
+    input::placeholder {
+      color: var(--text);
+    }
 
-form textarea:hover {
-  transform: translate(15px, 15px);
-}
+    textarea {
+      height: 20rem;
+      border: none;
+      border-bottom: 1px solid var(--input);
+      padding: 12px;
+      font-family: "Arbutus Slab", serif;
+      font-size: var(--subtitles-desktop);
+    }
+    textarea:hover {
+      border-color: var(--green);
+    }
+    textarea:focus {
+      border-color: var(--title);
+      outline: none;
+    }
 
-form textarea::placeholder {
-  color: #091e42;
-  font-family: 'Inter', sans-serif;
-}
+    textarea::placeholder {
+      color: var(--text);
+    }
 
-form button {
-  width: 129px;
-  align-self: center;
-}
-
+    button {
+      width: 10.7rem;
+    }
+  }
 `;
 
 export default Contact;

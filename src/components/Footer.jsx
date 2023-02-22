@@ -91,6 +91,7 @@ const Footer = () => {
 
 const FooterContainer = styled.div`
   padding: 2rem 1rem;
+  width: 100%;
   min-height: 35vh;
   background-color: var(--third-bg);
   color: var(--text);
