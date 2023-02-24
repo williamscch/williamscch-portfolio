@@ -87,11 +87,10 @@ const PortfolioContainer = styled.section`
 
   .carousel {
     cursor: grab;
-    click
 
-    ul {
+    /* ul {
       gap: 5rem;
-    }
+    } */
   }
 
   article {
