@@ -120,6 +120,7 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     transition: 0.5s;
+    z-index: 999;
   }
 
   .nav:hover {

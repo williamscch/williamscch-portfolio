@@ -57,6 +57,15 @@ const Footer = () => {
                 Join Microverse
               </a>
             </li>
+            <li>
+              <a
+                href="https://wa.me/+584127711031"
+                target="_blank"
+                rel="noreferrer"
+              >
+                WhatsApp
+              </a>
+            </li>
           </ul>
         </div>
         <div>
@@ -83,7 +92,6 @@ const Footer = () => {
       <h4 className="footer-text">
         {' '}
         Copyright ©2023 Williams Colmenares | All rights reserved.
-
       </h4>
     </FooterContainer>
   );

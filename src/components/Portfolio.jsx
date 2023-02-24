@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { useSelector } from 'react-redux';
-import Project from './Project';
+// import Project from './Project';
 
 const Portfolio = () => {
   const { portfolio } = useSelector((state) => state);
@@ -34,7 +34,7 @@ const Portfolio = () => {
       </div>
       <Carousel
         className="carousel"
-        autoPlay
+        // autoPlay
         keyBoardControl
         responsive={responsive}
         showDots
@@ -42,27 +42,33 @@ const Portfolio = () => {
         removeArrowOnDeviceType={['tablet', 'mobile']}
       >
         {portfolio.map((project) => (
-          <Project
-            className="project"
+          <article
             key={project.id}
-            id={project.id}
-            title={project.title}
-            description={project.description}
-            source={project.source}
-            live={project.live}
-            img={project.image}
-            languages={project.languages}
+            style={{ backgroundImage: `url(${project.image})` }}
           >
-            <article>
+            <div className="info-container">
               <h2>{project.title}</h2>
-              <img src={project.image} alt="project-screenshot" width="200" />
-              <div>
+              <div className="languages">
                 {project.languages.map((l) => (
                   <p key={l}>{l}</p>
                 ))}
               </div>
-            </article>
-          </Project>
+              <button type="button">See more</button>
+            </div>
+
+            {/* <Project id={project.id}>
+              <img src={project.image} alt="project-screenshot" width="200" />
+              <div className="info-container">
+                <h2>{project.title}</h2>
+                <div className="languages">
+                  {project.languages.map((l) => (
+                    <p key={l}>{l}</p>
+                  ))}
+                </div>
+                <button type="button">See more</button>
+              </div>
+            </Project> */}
+          </article>
         ))}
       </Carousel>
     </PortfolioContainer>
@@ -80,15 +86,45 @@ const PortfolioContainer = styled.section`
   }
 
   .carousel {
-/* z-index: -999; */
+    cursor: grab;
+    click
+
+    ul {
+      gap: 5rem;
+    }
   }
-  .project {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.705);
+
+  article {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: antiquewhite;
+    border-radius: 1.5rem;
+
+    .info-container {
+      background-color: #343a40ae;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        color: white;
+        text-shadow: 1px 1px 2px var(--green);
+      }
+
+      p {
+        color: white;
+      }
+      
+    }
+    .languages {
+      display: flex;
+    }
   }
 `;
 
