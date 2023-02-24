@@ -12,6 +12,7 @@ const Skills = () => (
 const SkillsContainer = styled.section`
   min-height: 100vh;
   padding: 100px 0;
+  background-color: red;
   .title {
     width: 100%;
     display: grid;

@@ -70,7 +70,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3>Emails</h3>
+          <h3>My Emails</h3>
           <ul>
             {email.map((mail) => (
               <li key={mail}>
@@ -82,8 +82,8 @@ const Footer = () => {
       </div>
       <h4 className="footer-text">
         {' '}
-        Copyright ©2023 All rights reserved | This page is made with ❤️ by
-        Williams Colmenares
+        Copyright ©2023 Williams Colmenares | All rights reserved.
+
       </h4>
     </FooterContainer>
   );
@@ -135,7 +135,7 @@ const FooterContainer = styled.div`
   }
 
   @media only screen and (min-width: 1008px) {
-    padding: 7rem 6rem;
+    padding: 6rem 6rem;
     .footer-columns {
       grid-template-columns: 30% 20% 20% 30%;
     }

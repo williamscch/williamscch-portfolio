@@ -14,14 +14,25 @@ const Contact = () => (
       </p>
     </div>
     <form action="https://formspree.io/f/xlezzzro" method="POST" id="form">
-      <input
-        id="name"
-        type="text"
-        name="full-name"
-        required="required"
-        maxLength="30"
-        placeholder="Full name"
-      />
+      <div className="name">
+        <input
+          id="first-name"
+          type="text"
+          name="first-name"
+          required="required"
+          maxLength="30"
+          placeholder="Firts name"
+        />
+
+        <input
+          id="last-name"
+          type="text"
+          name="last-name"
+          required="required"
+          maxLength="30"
+          placeholder="Last name"
+        />
+      </div>
 
       <input id="email" type="email" name="email" placeholder="Email address" />
 
@@ -43,7 +54,7 @@ const Contact = () => (
 );
 const ContactContainer = styled.section`
   padding: 2.5rem 1.7rem;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
 
@@ -66,7 +77,15 @@ const ContactContainer = styled.section`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    height: 100%;
+    min-height: 100%;
+
+    .name {
+      display: flex;
+      width: 100%;
+      input {
+        width: 50%;
+      }
+    }
 
     input {
       height: 3rem;
@@ -111,6 +130,20 @@ const ContactContainer = styled.section`
 
     button {
       width: 10.7rem;
+    }
+  }
+
+  /* @media only screen and (min-width: 641px) {
+  } */
+
+  @media only screen and (min-width: 1008px) {
+    padding: 7rem 7rem;
+    min-height: 120vh;
+
+    form {
+      textarea {
+        height: 15rem;
+      }
     }
   }
 `;
