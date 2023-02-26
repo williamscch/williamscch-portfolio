@@ -65,7 +65,7 @@ const state = {
       id: nextId('project-'),
       title: 'Rental Cars',
       description: '',
-      languages: [],
+      languages: ['RoR', 'React', 'Capybara', 'PostgreSQL'],
       live: '',
       source: '',
       image: '',
@@ -74,7 +74,7 @@ const state = {
       id: nextId('project-'),
       title: 'Recipe App',
       description: 'RoR Project that keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list',
-      languages: ['Ruby', 'Rails', 'Rspec', 'Capybara', 'PostgreSQL', 'RoR', 'CSS'],
+      languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '',
       source: 'https://github.com/williamscch/recipes_rails_app',
       image: '',
@@ -84,7 +84,7 @@ const state = {
       title: 'My Spend Manager',
       description:
         'Mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
-      languages: ['Ruby', 'Rails', 'Rspec', 'Capybara', 'PostgreSQL', 'RoR', 'CSS'],
+      languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '',
       source: 'https://github.com/williamscch/budget_rails_app',
       image: '',
@@ -93,7 +93,7 @@ const state = {
       id: nextId('project-'),
       title: 'Williams Blog',
       description: '',
-      languages: [],
+      languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '',
       source: 'https://github.com/williamscch/blog_rails_app',
       image: '',
@@ -103,7 +103,7 @@ const state = {
       title: 'Forex App',
       description:
         'Web APP Focused only on currency trading, covers some of the major currency pairs traded worldwide, such as EUR/USD, USD/JPY and GBP/USD.',
-      languages: [],
+      languages: ['React', 'Redux', 'Javascript', 'Jest'],
       live: 'https://forexappwilliamscch.netlify.app/',
       source: 'https://github.com/williamscch/forex-app',
       image:
@@ -114,7 +114,7 @@ const state = {
       title: 'TV Shows',
       description:
         'TV Shows Web App - A web application based on an external API which contains information about TV shows. th web app let you like the shows that you like the most and comment what you think about them making use of an involvement API to save this interaction information.',
-      languages: [],
+      languages: ['Javascript', 'ES6', 'API', 'Jest'],
       live: 'https://williamscch.github.io/tv-shows/dist/',
       source: 'https://github.com/williamscch/tv-shows',
       image: 'https://raw.githubusercontent.com/williamscch/tv-shows/development/app-ss.png',
@@ -124,7 +124,7 @@ const state = {
       title: 'Leader-board',
       description:
         'LeaderBoard web app that displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service',
-      languages: ['JavaScript', 'Webpack', 'CSS'],
+      languages: ['JavaScript', 'Webpack', 'API', 'CSS'],
       live: 'https://leaderboardwilliamscch.netlify.app/',
       source: 'https://github.com/williamscch/leaderboard',
       image:
