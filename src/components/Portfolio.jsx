@@ -46,10 +46,6 @@ const Portfolio = () => {
               className="bg-container"
               style={{
                 backgroundImage: `url(${project.image})`,
-                width: '95%',
-                height: '90%',
-                borderRadius: '5px',
-                position: 'absolute',
               }}
             >
               <div className="info-container">
@@ -97,13 +93,18 @@ const PortfolioContainer = styled.section`
 
   article {
     min-height: 30rem;
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    background-position: bottom 10px right 20px;
     display: flex;
     justify-content: center;
 
     .bg-container {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 95%;
+      height: 90%;
+      border-radius: 5px;
+      position: absolute;
+
       .info-container {
         background-color: #343a40c7;
         width: 100%;

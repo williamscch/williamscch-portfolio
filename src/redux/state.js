@@ -64,16 +64,19 @@ const state = {
     {
       id: nextId('project-'),
       title: 'Rental Cars',
-      description: '',
+      description:
+        'This project is made for the Renting of cars. You can add, reserve, and delete cars from our website! Built with React-Redux and Rails.',
       languages: ['RoR', 'React', 'Capybara', 'PostgreSQL'],
-      live: '',
-      source: '',
-      image: '',
+      live: 'https://639355566c9e9858f93bb1bb--bejewelled-cucurucho-3790b4.netlify.app/',
+      source: 'https://github.com/williamscch/front_rental_cars',
+      image:
+        'https://raw.githubusercontent.com/williamscch/front_rental_cars/dev/app-ss.png',
     },
     {
       id: nextId('project-'),
       title: 'Recipe App',
-      description: 'RoR Project that keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list',
+      description:
+        'RoR Project that keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list',
       languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '',
       source: 'https://github.com/williamscch/recipes_rails_app',
@@ -117,7 +120,8 @@ const state = {
       languages: ['Javascript', 'ES6', 'API', 'Jest'],
       live: 'https://williamscch.github.io/tv-shows/dist/',
       source: 'https://github.com/williamscch/tv-shows',
-      image: 'https://raw.githubusercontent.com/williamscch/tv-shows/development/app-ss.png',
+      image:
+        'https://raw.githubusercontent.com/williamscch/tv-shows/development/app-ss.png',
     },
     {
       id: nextId('project-'),
@@ -137,7 +141,8 @@ const state = {
       languages: ['JavaScript', 'React', 'CSS'],
       live: 'https://williamscchmathmagicians.netlify.app/',
       source: 'https://github.com/williamscch/math-magicians',
-      image: 'https://raw.githubusercontent.com/williamscch/math-magicians/development/app-ss.png',
+      image:
+        'https://raw.githubusercontent.com/williamscch/math-magicians/development/app-ss.png',
     },
     {
       id: nextId('project-'),
@@ -147,7 +152,8 @@ const state = {
       languages: ['Javascript', 'CSS', 'HTML'],
       live: 'https://williamscch.github.io/to-do-list/dist/',
       source: 'https://github.com/williamscch/to-do-list',
-      image: 'https://raw.githubusercontent.com/williamscch/to-do-list/master/app-ss.png',
+      image:
+        'https://raw.githubusercontent.com/williamscch/to-do-list/master/app-ss.png',
     },
     {
       id: nextId('project-'),
@@ -157,7 +163,8 @@ const state = {
       languages: ['Javascript', 'CSS', 'HTML'],
       live: 'https://williamscch.github.io/pizza-restaurant-page/',
       source: 'https://github.com/williamscch/pizza-restaurant-page',
-      image: 'https://raw.githubusercontent.com/williamscch/pizza-restaurant-page/master/assets/img/ss.png',
+      image:
+        'https://raw.githubusercontent.com/williamscch/pizza-restaurant-page/master/assets/img/ss.png',
     },
   ],
   contact: {
