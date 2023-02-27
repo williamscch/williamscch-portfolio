@@ -15,15 +15,15 @@ const Portfolio = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 3,
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 2,
+      items: 1,
     },
   };
 
@@ -78,7 +78,7 @@ const Portfolio = () => {
 };
 
 const PortfolioContainer = styled.section`
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 2.5rem 0;
   .title {
     width: 100%;
@@ -141,67 +141,15 @@ const PortfolioContainer = styled.section`
       }
     }
   }
+
+  @media only screen and (min-width: 641px) {
+    padding: 6rem 0;
+  }
+
+  @media only screen and (min-width: 1008px) {
+    padding: 7rem 0;
+    min-height: 100vh;
+  }
 `;
 
 export default Portfolio;
-
-// min-height: 100vh;
-// padding: 100px 6rem;
-// .title {
-//   width: 100%;
-//   display: grid;
-//   place-items: center;
-//   margin-bottom: 2rem;
-// }
-
-// .carousel {
-//   cursor: grab;
-// }
-
-// article {
-//   min-height: 30rem;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
-//   /* background-color: var(--green); */
-//   border-radius: 1.5rem;
-//   display: grid;
-//   place-items: center;
-
-//   .bg-container {
-//     .info-container {
-//       background-color: #343a40ae;
-//       width: 100%;
-//       height: 100%;
-//       position: absolute;
-//       border-radius: 1.5rem;
-//       display: grid;
-//       grid-template-rows: 70% 20% 10%;
-//       grid-template-columns: 100%;
-//       padding: 1rem;
-
-//       h2 {
-//         color: white;
-//         text-shadow: 1px 1px 2px var(--green);
-//         font-size: 1.5rem;
-//         align-self: end;
-//       }
-
-//       .languages {
-//         display: flex;
-//         gap: 0.5rem;
-//         align-self: center;
-
-//         span {
-//           color: white;
-//           font-size: 0.8rem;
-//         }
-//       }
-
-//       button {
-//         padding: 0;
-//         max-width: 100%;
-//       }
-//     }
-//   }
-// }
