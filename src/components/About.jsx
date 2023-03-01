@@ -12,7 +12,10 @@ const About = () => {
         <hr />
       </div>
       <div className="content">
-        <img src={meImg} alt="img" />
+        <div className="image">
+          <img src={meImg} alt="img" />
+        </div>
+
         <p>{about.column1}</p>
         <div className="last-column">
           <p>{about.column2}</p>
@@ -24,7 +27,6 @@ const About = () => {
             >
               Get my CV
             </a>
-
           </button>
         </div>
       </div>
@@ -42,11 +44,12 @@ const AboutContainer = styled.section`
 
     h2 {
       margin-bottom: 1.25rem;
+      font-size: var(--fs-title);
     }
 
     hr {
       background-color: var(--green);
-      width: 3rem;
+      width: 4rem;
       margin: 0;
     }
   }
@@ -58,23 +61,32 @@ const AboutContainer = styled.section`
     min-height: 92vh;
     padding: 0 1rem;
 
-    img {
-      width: 100%;
+    .image {
       background-color: var(--third-bg);
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 80%;
+        /* max-height: 100%; */
+        object-fit: cover;
+      }
     }
 
     p {
       font-size: 0.8rem;
       margin-top: 0;
       margin-bottom: 0.7rem;
+      align-self: center;
+      line-height: 1.4;
     }
 
     .last-column {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
 
       button {
+        margin-top: auto;
         width: 10rem;
 
         a {
@@ -87,6 +99,16 @@ const AboutContainer = styled.section`
 
   @media only screen and (min-width: 641px) {
     padding: 6rem 0;
+
+    .content {
+      margin: 0 1.5rem;
+      grid-template-rows: 45% 25% 30%;
+      min-height: 90vh;
+      p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+    }
   }
 
   @media only screen and (min-width: 1008px) {
