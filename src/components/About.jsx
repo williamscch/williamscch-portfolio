@@ -136,10 +136,10 @@ const AboutContainer = styled.section`
       }
 
       .image {
+        padding: 0;
         img {
           width: 100%;
-    height: auto;
-    object-fit: scale-down;
+          object-fit: scale-down;
         }
       }
 
