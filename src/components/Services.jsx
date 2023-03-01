@@ -29,42 +29,111 @@ const Services = () => {
 };
 
 const ServicesContainer = styled.section`
-  min-height: 100vh;
-  padding: 100px 6rem;
+  padding: 2.5rem 1rem;
   .title {
     width: 100%;
     display: grid;
     place-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .cards {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(10rem, auto);
     grid-gap: 2.5rem;
+    place-content: center;
 
     article {
       display: grid;
-      grid-template-columns: 15% 85%;
+      grid-template-columns: 20% 80%;
       grid-gap: 1rem;
+      padding: 1.8rem;
+      box-shadow: 0 1px 2px 0px rgb(0 0 0 / 20%);
+      place-items: start;
+      transition: .3s all ease-in-out;
+      cursor: pointer;
 
       span {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
         border-radius: 50%;
         background-color: var(--green);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
+        display: grid;
+        place-items: center;
         justify-self: center;
+        align-self: flex-start;
 
         i {
-        font-size: var(--titles-desktop);
-        color: var(--white);
+          font-size: var(--titles-desktop);
+          color: var(--white);
+        }
       }
+    }
+
+    article:hover {
+      box-shadow: 0 8px 50px -5px rgba(0, 0, 0, 0.1);
+      transform: translate(0, -0.5rem);
       }
+  }
+
+  @media only screen and (min-width: 641px) {
+    padding: 6rem 0;
+
+    .title {
+      margin-bottom: 6rem;
+    }
+
+    .cards {
+      grid-template-columns: 47% 47%;
+      grid-gap: 1.5rem;
+      padding: 0 1rem;
+    }
+  }
+
+  @media only screen and (min-width: 1008px) {
+    padding: 7rem 0;
+    margin: 0 6rem;
+    min-height: 100vh;
+
+    .cards {
+      grid-gap: 2.5rem;
     }
   }
 `;
 
 export default Services;
+
+// .title {
+//   width: 100%;
+//   display: grid;
+//   place-items: center;
+//   margin-bottom: 3rem;
+// }
+// .cards {
+//   display: grid;
+//   grid-template-columns: 50% 50%;
+//   grid-gap: 2.5rem;
+
+//   article {
+//     display: grid;
+//     grid-template-columns: 15% 85%;
+//     grid-gap: 1rem;
+
+//     span {
+//       width: 5rem;
+//       height: 5rem;
+//       border-radius: 50%;
+//       background-color: var(--green);
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       align-self: center;
+//       justify-self: center;
+
+//       i {
+//       font-size: var(--titles-desktop);
+//       color: var(--white);
+//     }
+//     }
+//   }
+// }

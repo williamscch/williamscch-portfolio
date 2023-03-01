@@ -25,7 +25,7 @@ const state = {
     {
       id: nextId('services-'),
       title: 'APIs',
-      description: 'Write effective APIs',
+      description: 'Write effective APIs. Develop powerful and secure custom API solutions',
       icon: 'fa-solid fa-cloud-arrow-down',
     },
     {
@@ -64,17 +64,20 @@ const state = {
     {
       id: nextId('project-'),
       title: 'Rental Cars',
-      description: '',
-      languages: [],
-      live: '',
-      source: '',
-      image: '',
+      description:
+        'This project is made for the Renting of cars. You can add, reserve, and delete cars from our website! Built with React-Redux and Rails.',
+      languages: ['RoR', 'React', 'Capybara', 'PostgreSQL'],
+      live: 'https://639355566c9e9858f93bb1bb--bejewelled-cucurucho-3790b4.netlify.app/',
+      source: 'https://github.com/williamscch/front_rental_cars',
+      image:
+        'https://raw.githubusercontent.com/williamscch/front_rental_cars/dev/app-ss.png',
     },
     {
       id: nextId('project-'),
       title: 'Recipe App',
-      description: 'RoR Project that keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list',
-      languages: ['Ruby', 'Rails', 'Rspec', 'Capybara', 'PostgreSQL', 'RoR', 'CSS'],
+      description:
+        'RoR Project that keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list',
+      languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '',
       source: 'https://github.com/williamscch/recipes_rails_app',
       image: '',
@@ -84,7 +87,7 @@ const state = {
       title: 'My Spend Manager',
       description:
         'Mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
-      languages: ['Ruby', 'Rails', 'Rspec', 'Capybara', 'PostgreSQL', 'RoR', 'CSS'],
+      languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '',
       source: 'https://github.com/williamscch/budget_rails_app',
       image: '',
@@ -93,7 +96,7 @@ const state = {
       id: nextId('project-'),
       title: 'Williams Blog',
       description: '',
-      languages: [],
+      languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '',
       source: 'https://github.com/williamscch/blog_rails_app',
       image: '',
@@ -103,7 +106,7 @@ const state = {
       title: 'Forex App',
       description:
         'Web APP Focused only on currency trading, covers some of the major currency pairs traded worldwide, such as EUR/USD, USD/JPY and GBP/USD.',
-      languages: [],
+      languages: ['React', 'Redux', 'Javascript', 'Jest'],
       live: 'https://forexappwilliamscch.netlify.app/',
       source: 'https://github.com/williamscch/forex-app',
       image:
@@ -114,17 +117,18 @@ const state = {
       title: 'TV Shows',
       description:
         'TV Shows Web App - A web application based on an external API which contains information about TV shows. th web app let you like the shows that you like the most and comment what you think about them making use of an involvement API to save this interaction information.',
-      languages: [],
+      languages: ['Javascript', 'ES6', 'API', 'Jest'],
       live: 'https://williamscch.github.io/tv-shows/dist/',
       source: 'https://github.com/williamscch/tv-shows',
-      image: 'https://raw.githubusercontent.com/williamscch/tv-shows/development/app-ss.png',
+      image:
+        'https://raw.githubusercontent.com/williamscch/tv-shows/development/app-ss.png',
     },
     {
       id: nextId('project-'),
       title: 'Leader-board',
       description:
         'LeaderBoard web app that displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service',
-      languages: ['JavaScript', 'Webpack', 'CSS'],
+      languages: ['JavaScript', 'Webpack', 'API', 'CSS'],
       live: 'https://leaderboardwilliamscch.netlify.app/',
       source: 'https://github.com/williamscch/leaderboard',
       image:
@@ -137,7 +141,8 @@ const state = {
       languages: ['JavaScript', 'React', 'CSS'],
       live: 'https://williamscchmathmagicians.netlify.app/',
       source: 'https://github.com/williamscch/math-magicians',
-      image: 'https://raw.githubusercontent.com/williamscch/math-magicians/development/app-ss.png',
+      image:
+        'https://raw.githubusercontent.com/williamscch/math-magicians/development/app-ss.png',
     },
     {
       id: nextId('project-'),
@@ -147,7 +152,8 @@ const state = {
       languages: ['Javascript', 'CSS', 'HTML'],
       live: 'https://williamscch.github.io/to-do-list/dist/',
       source: 'https://github.com/williamscch/to-do-list',
-      image: 'https://raw.githubusercontent.com/williamscch/to-do-list/master/app-ss.png',
+      image:
+        'https://raw.githubusercontent.com/williamscch/to-do-list/master/app-ss.png',
     },
     {
       id: nextId('project-'),
@@ -157,7 +163,8 @@ const state = {
       languages: ['Javascript', 'CSS', 'HTML'],
       live: 'https://williamscch.github.io/pizza-restaurant-page/',
       source: 'https://github.com/williamscch/pizza-restaurant-page',
-      image: 'https://raw.githubusercontent.com/williamscch/pizza-restaurant-page/master/assets/img/ss.png',
+      image:
+        'https://raw.githubusercontent.com/williamscch/pizza-restaurant-page/master/assets/img/ss.png',
     },
   ],
   contact: {

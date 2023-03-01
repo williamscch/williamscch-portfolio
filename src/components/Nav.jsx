@@ -38,7 +38,7 @@ const Nav = () => {
               spy
               hashSpy
               smooth
-              offset={-40}
+              offset={40}
               delay={200}
               duration={600}
             >
@@ -120,6 +120,7 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     transition: 0.5s;
+    z-index: 999;
   }
 
   .nav:hover {
