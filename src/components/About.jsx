@@ -11,12 +11,16 @@ const About = () => {
         <h2>About Me</h2>
         <hr />
       </div>
+
       <div className="content">
         <div className="image">
           <img src={meImg} alt="img" />
         </div>
 
-        <p>{about.column1}</p>
+        <div className="first-column">
+          <p>{about.column1}</p>
+        </div>
+
         <div className="last-column">
           <p>{about.column2}</p>
           <button type="button">
@@ -51,6 +55,7 @@ const AboutContainer = styled.section`
       background-color: var(--green);
       width: 4rem;
       margin: 0;
+      height: 3px;
     }
   }
 
@@ -59,16 +64,15 @@ const AboutContainer = styled.section`
     grid-template-columns: 100%;
     grid-template-rows: 40% 30% 30%;
     min-height: 92vh;
-    padding: 0 1rem;
 
     .image {
+      padding: 0 1rem;
       background-color: var(--third-bg);
       display: flex;
       justify-content: center;
 
       img {
         width: 80%;
-        /* max-height: 100%; */
         object-fit: cover;
       }
     }
@@ -81,7 +85,12 @@ const AboutContainer = styled.section`
       line-height: 1.4;
     }
 
+    .first-column {
+      padding: 0 1rem;
+    }
+
     .last-column {
+      padding: 0 1rem;
       display: flex;
       flex-direction: column;
 
@@ -113,7 +122,32 @@ const AboutContainer = styled.section`
 
   @media only screen and (min-width: 1008px) {
     padding: 7rem 0;
+    margin: 0 6rem;
     min-height: 100vh;
+
+    .content {
+      grid-template-columns: 35% 30% 35%;
+      grid-template-rows: 100%;
+      min-height: auto;
+      margin: 0;
+
+      .first-column {
+        order: -1;
+      }
+
+      .image {
+        img {
+          width: 100%;
+    height: auto;
+    object-fit: scale-down;
+        }
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+    }
   }
 `;
 
