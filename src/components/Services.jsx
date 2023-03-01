@@ -50,7 +50,7 @@ const ServicesContainer = styled.section`
       padding: 1.8rem;
       box-shadow: 0 1px 2px 0px rgb(0 0 0 / 20%);
       place-items: start;
-      transition: .3s all ease-in-out;
+      transition: 0.3s all ease-in-out;
       cursor: pointer;
 
       span {
@@ -73,7 +73,7 @@ const ServicesContainer = styled.section`
     article:hover {
       box-shadow: 0 8px 50px -5px rgba(0, 0, 0, 0.1);
       transform: translate(0, -0.5rem);
-      }
+    }
   }
 
   @media only screen and (min-width: 641px) {
@@ -102,38 +102,3 @@ const ServicesContainer = styled.section`
 `;
 
 export default Services;
-
-// .title {
-//   width: 100%;
-//   display: grid;
-//   place-items: center;
-//   margin-bottom: 3rem;
-// }
-// .cards {
-//   display: grid;
-//   grid-template-columns: 50% 50%;
-//   grid-gap: 2.5rem;
-
-//   article {
-//     display: grid;
-//     grid-template-columns: 15% 85%;
-//     grid-gap: 1rem;
-
-//     span {
-//       width: 5rem;
-//       height: 5rem;
-//       border-radius: 50%;
-//       background-color: var(--green);
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//       align-self: center;
-//       justify-self: center;
-
-//       i {
-//       font-size: var(--titles-desktop);
-//       color: var(--white);
-//     }
-//     }
-//   }
-// }

@@ -27,7 +27,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                My Curriculum
+                My Curriculum Vitae
               </a>
             </li>
             <li>

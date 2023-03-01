@@ -25,7 +25,8 @@ const state = {
     {
       id: nextId('services-'),
       title: 'APIs',
-      description: 'Write effective APIs. Develop powerful and secure custom API solutions',
+      description:
+        'Write effective APIs. Develop powerful and secure custom API solutions',
       icon: 'fa-solid fa-cloud-arrow-down',
     },
     {
@@ -44,9 +45,9 @@ const state = {
 
   about: {
     column1:
-      'I"m Williams, a full-stack developer, who graduated from Microverse, a remote software development school with people from all around the world. Before programming, I have a Bachelor"s Degree in Accounting. I graduated as an International Haute Cuisine Chef Technician, and I got an Advanced Certificate in English. I have a large experience in communication, teamwork, empathy with different people, and working under pressure with tight deadlines, skills needed to succeed in the development world. I"ve spent a year completely immersed in pair-programming remote development, doing everything from landing pages to Rails APIs, to build pretty client-side web apps following wireframes and design lines.',
+      "I'm a full-stack developer passionate for build system solutions with high attention to detail and a love for clean code. Before programming, I have a Bachelor's Degree in Accounting, with work experience in business management. Experienced in communication, teamwork, empathy with different people, and working under pressure with tight deadlines. I've developed multiple projects remotely being part of cross-functional teams, where I have gained skills in scrum habits and pair programming.",
     column2:
-      'I have grown my stack with languages like JavaScript and Ruby and frameworks like React and Rails. In all my studies in different areas, I have gained abilities like fighting through difficulty and never giving up because constant practice is the key to growth. I have experience managing a restaurant for over 3 years, and I could say that this has taught me that responsibility is a fundamental key in all areas of life, as well as knowing how to resolve conflicts peacefully and the value of working. To relax I love practicing sports, and cooking... I"m a cinema and music lover.',
+      "I always try to find a simpler solution to complex problems, I consider myself an enthusiastic and creative who is constantly looking for new challenges and willing to give help to my teammates, actually, I've had the opportunity to mentor junior team members and share my knowledge and expertise. To relax I love practicing sports, cooking, and reading IT articles... I'm a cinema lover.",
   },
 
   portfolio: [
