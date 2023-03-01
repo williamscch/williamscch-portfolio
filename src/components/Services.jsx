@@ -92,7 +92,12 @@ const ServicesContainer = styled.section`
 
   @media only screen and (min-width: 1008px) {
     padding: 7rem 0;
+    margin: 0 6rem;
     min-height: 100vh;
+
+    .cards {
+      grid-gap: 2.5rem;
+    }
   }
 `;
 
