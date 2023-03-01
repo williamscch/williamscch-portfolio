@@ -25,7 +25,7 @@ const state = {
     {
       id: nextId('services-'),
       title: 'APIs',
-      description: 'Write effective APIs',
+      description: 'Write effective APIs. Develop powerful and secure custom API solutions',
       icon: 'fa-solid fa-cloud-arrow-down',
     },
     {
