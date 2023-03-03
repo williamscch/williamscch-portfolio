@@ -14,18 +14,30 @@ const Testimonials = () => {
         <hr />
       </div>
 
-      <Carousel dynamicHeight showArrows={false} showStatus={false}>
+      <Carousel
+        dynamicHeight
+        showArrows={false}
+        showStatus={false}
+        showThumbs={false}
+        useKeyboardArrows
+        autoPlay
+        emulateTouch
+        infiniteLoop
+        interval={5000}
+        transitionTime={1000}
+      >
         {testimonials.map((t) => (
-          <article
-            key={t.id}
-            className="content"
-          >
+          <article key={t.id} className="content">
             <p>{t.message}</p>
             <h3>
               ~
               {t.author}
             </h3>
             <span>{t.role}</span>
+            <div style={{ height: '3rem' }}>
+              {' '}
+            </div>
+
           </article>
         ))}
       </Carousel>
@@ -62,6 +74,7 @@ const TestimonialsContainer = styled.section`
     padding: 0 1rem;
     text-align: center;
     font-style: italic;
+    display: inline-block;
 
     p {
       margin-top: 0;
@@ -72,6 +85,10 @@ const TestimonialsContainer = styled.section`
       color: rgba(255, 255, 255, 0.5);
     }
   }
+
+  .carousel .slider-wrapper {
+    transition: height .5s ease-in-out;
+}
 `;
 
 export default Testimonials;
