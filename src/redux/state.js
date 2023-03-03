@@ -209,6 +209,48 @@ const state = {
     ],
     email: ['williamscolmenaresch@gmail.com', 'david.13.2121@gmail.com'],
   },
+  testimonials: [
+    {
+      id: nextId('testimonial-'),
+      author: 'Vitor Guedes Madeira',
+      role: 'Full stack developer',
+      height: 68,
+      message:
+        "I've met Williams during a coding bootcamp and it was always a pleasure to be partnered with him. Making friends and working with different people is a natural skill for him, so it makes the whole environment better for everyone to work together, especially when it comes to team projects, since he also has such a great coding organization. He codes in a way that other programmers won't struggle to work on his projects. At that time, Williams used to work and study at the same time and he never missed a single deadline, always worried about delivering it on time, this is something I really admire on him. I just hope we can get to work together again in the future!",
+    },
+    {
+      id: nextId('testimonial-'),
+      author: 'Alzubair Alqaraghuli',
+      role: 'Full stack developer',
+      height: 51,
+      message:
+        "Williams is a fantastic developer, and his detail-oriented approach made him a pleasure to work with. We pair-programmed extensively together while enrolled at microverse, and in that time his work ethic blew me away. Williams views writing clean, accessible code as a calling, and he's great at identifying areas where we can improve UI. He's also super friendly; by the time our project was done, I felt like we'd known each other for years. I can't recommend him enough!",
+    },
+    {
+      id: nextId('testimonial-'),
+      author: 'Alejandro Jose Torres Valero',
+      role: 'Software Developer',
+      height: 41,
+      message:
+        'Williams is a great partner that is always trying to become the best of himself. He and I worked together doing some projects in Javascript and React as students at Microverse, and he always showed professionalism, A person that is always listening to the problems of others and always trying to be a proactive person and has excellent skills in problem-solving',
+    },
+    {
+      id: nextId('testimonial-'),
+      author: 'Diego Yon',
+      role: 'Full stack developer',
+      height: 35,
+      message:
+        'It is my pleasure to recommend Williams. I have had the opportunity to work with him a couple of times now and I can say that he is a great teammate to have, very knowledgeable, and easy to work with. He not only gets the job done, but he also goes above and beyond in every project.',
+    },
+    {
+      id: nextId('testimonial-'),
+      author: 'Muhyideen Elias',
+      role: 'DevOps Engineer',
+      height: 41,
+      message:
+        'Williams is a great person and deeply creative I will say because he has a great eye for details. I worked with him for several weeks during microverse training. I am always inspired by his decision to be a full-stack developer because of his previous background. And he has this tenacity for seeing things through and having very good interpersonal relationship skills.',
+    },
+  ],
 };
 
 export default state;

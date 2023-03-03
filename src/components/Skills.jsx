@@ -11,12 +11,16 @@ const Skills = () => (
 
 const SkillsContainer = styled.section`
   min-height: 100vh;
-  padding: 100px 0;
-  background-color: red;
+  padding: 2.5rem 1rem;
+
   .title {
     width: 100%;
     display: grid;
     place-items: center;
+
+    h2 {
+      font-size: var(--fs-title);
+    }
   }
 `;
 

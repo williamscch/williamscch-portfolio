@@ -35,6 +35,10 @@ const ServicesContainer = styled.section`
     display: grid;
     place-items: center;
     margin-bottom: 4rem;
+
+    h2 {
+      font-size: var(--fs-title);
+    }
   }
   .cards {
     display: grid;
