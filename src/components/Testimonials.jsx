@@ -77,7 +77,6 @@ const TestimonialsContainer = styled.section`
     padding: 0 1rem;
     text-align: center;
     font-style: italic;
-    display: inline-block;
 
     a {
       color: var(--white);
@@ -94,7 +93,6 @@ const TestimonialsContainer = styled.section`
       margin-top: 1rem;
       color: rgba(255, 255, 255, 0.5);
       font-size: 1rem;
-      /* margin: 0; */
     }
   }
 
