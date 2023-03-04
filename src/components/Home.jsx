@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
-import heroImg from '../assets/img/banner-bg.png';
+import heroImg from '../assets/img/gris.svg';
 
 const Home = () => (
   <HomeContainer id="home">
-    <div>
+    <div className="bg">
+      <img src={heroImg} alt="hero-williams" />
+    </div>
+    <div className="content">
       <h1>I&apos;m Williams Colmenares</h1>
       <p>A Full-Stack Web Developer Based on Venezuela</p>
       <button type="button">
@@ -26,15 +29,7 @@ const Home = () => (
 );
 
 const HomeContainer = styled.section`
-  background-image: url(${heroImg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 87%;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  /* padding: 100px 0; */
 
   h1 {
     font-size: 2.5rem;
@@ -46,8 +41,22 @@ const HomeContainer = styled.section`
     margin: 0 0 1rem;
   }
 
-  div {
-    padding: 5rem;
+  .bg {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--third-bg);
+    position: absolute;
+
+    img {
+      object-fit: scale-down;
+      width: 100%;
+    }
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
   }
 `;
 
