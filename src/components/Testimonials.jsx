@@ -28,16 +28,19 @@ const Testimonials = () => {
       >
         {testimonials.map((t) => (
           <article key={t.id} className="content">
-            <p>{t.message}</p>
+            <a
+              href="https://www.linkedin.com/in/williamscolmenaresch/details/recommendations/?detailScreenTabIndex=0"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t.message}
+            </a>
             <h3>
               ~
               {t.author}
             </h3>
             <span>{t.role}</span>
-            <div style={{ height: '3rem' }}>
-              {' '}
-            </div>
-
+            <div style={{ height: '3rem' }}> </div>
           </article>
         ))}
       </Carousel>
@@ -76,19 +79,53 @@ const TestimonialsContainer = styled.section`
     font-style: italic;
     display: inline-block;
 
-    p {
-      margin-top: 0;
+    a {
       color: var(--white);
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     h3 {
+      margin-top: 1rem;
       color: rgba(255, 255, 255, 0.5);
+      font-size: 1rem;
+      /* margin: 0; */
     }
   }
 
   .carousel .slider-wrapper {
-    transition: height .5s ease-in-out;
-}
+    transition: height 0.5s ease-in-out;
+  }
+
+  @media only screen and (min-width: 641px) {
+    padding: 6rem 0;
+
+    .title {
+      margin-bottom: 6rem;
+    }
+
+    .carousel-root {
+      margin: 0 3rem;
+    }
+  }
+
+  @media only screen and (min-width: 1008px) {
+    padding: 7rem 0;
+
+    .content {
+      padding: 0 3rem;
+    }
+
+    .carousel-root {
+      margin: 0 6rem;
+      padding: 0 1rem;
+    }
+  }
 `;
 
 export default Testimonials;
