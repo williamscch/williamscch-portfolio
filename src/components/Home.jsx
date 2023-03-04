@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
-import heroImg from '../assets/banner-bg.png';
+import heroImg from '../assets/img/banner-bg.png';
 
 const Home = () => (
   <HomeContainer id="home">

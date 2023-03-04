@@ -27,7 +27,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                My Curriculum
+                My Curriculum Vitae
               </a>
             </li>
             <li>
@@ -89,10 +89,10 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <h4 className="footer-text">
+      <h3 className="footer-text">
         {' '}
         Copyright ©2023 Williams Colmenares | All rights reserved.
-      </h4>
+      </h3>
     </FooterContainer>
   );
 };

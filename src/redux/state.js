@@ -25,7 +25,8 @@ const state = {
     {
       id: nextId('services-'),
       title: 'APIs',
-      description: 'Write effective APIs. Develop powerful and secure custom API solutions',
+      description:
+        'Write effective APIs. Develop powerful and secure custom API solutions',
       icon: 'fa-solid fa-cloud-arrow-down',
     },
     {
@@ -44,9 +45,9 @@ const state = {
 
   about: {
     column1:
-      'I"m Williams, a full-stack developer, who graduated from Microverse, a remote software development school with people from all around the world. Before programming, I have a Bachelor"s Degree in Accounting. I graduated as an International Haute Cuisine Chef Technician, and I got an Advanced Certificate in English. I have a large experience in communication, teamwork, empathy with different people, and working under pressure with tight deadlines, skills needed to succeed in the development world. I"ve spent a year completely immersed in pair-programming remote development, doing everything from landing pages to Rails APIs, to build pretty client-side web apps following wireframes and design lines.',
+      "I'm a full-stack developer passionate for build system solutions with high attention to detail and a love for clean code. Before programming, I have a Bachelor's Degree in Accounting, with work experience in business management. Experienced in communication, teamwork, empathy with different people, and working under pressure with tight deadlines. I've developed multiple projects remotely being part of cross-functional teams, where I have gained skills in scrum habits and pair programming.",
     column2:
-      'I have grown my stack with languages like JavaScript and Ruby and frameworks like React and Rails. In all my studies in different areas, I have gained abilities like fighting through difficulty and never giving up because constant practice is the key to growth. I have experience managing a restaurant for over 3 years, and I could say that this has taught me that responsibility is a fundamental key in all areas of life, as well as knowing how to resolve conflicts peacefully and the value of working. To relax I love practicing sports, and cooking... I"m a cinema and music lover.',
+      "I always try to find a simpler solution to complex problems, I consider myself an enthusiastic and creative who is constantly looking for new challenges and willing to give help to my teammates, actually, I've had the opportunity to mentor junior team members and share my knowledge and expertise. To relax I love practicing sports, cooking, and reading IT articles... I'm a cinema lover.",
   },
 
   portfolio: [
@@ -208,6 +209,48 @@ const state = {
     ],
     email: ['williamscolmenaresch@gmail.com', 'david.13.2121@gmail.com'],
   },
+  testimonials: [
+    {
+      id: nextId('testimonial-'),
+      author: 'Vitor Guedes Madeira',
+      role: 'Full stack developer',
+      height: 68,
+      message:
+        "I've met Williams during a coding bootcamp and it was always a pleasure to be partnered with him. Making friends and working with different people is a natural skill for him, so it makes the whole environment better for everyone to work together, especially when it comes to team projects, since he also has such a great coding organization. He codes in a way that other programmers won't struggle to work on his projects. At that time, Williams used to work and study at the same time and he never missed a single deadline, always worried about delivering it on time, this is something I really admire on him. I just hope we can get to work together again in the future!",
+    },
+    {
+      id: nextId('testimonial-'),
+      author: 'Alzubair Alqaraghuli',
+      role: 'Full stack developer',
+      height: 51,
+      message:
+        "Williams is a fantastic developer, and his detail-oriented approach made him a pleasure to work with. We pair-programmed extensively together while enrolled at microverse, and in that time his work ethic blew me away. Williams views writing clean, accessible code as a calling, and he's great at identifying areas where we can improve UI. He's also super friendly; by the time our project was done, I felt like we'd known each other for years. I can't recommend him enough!",
+    },
+    {
+      id: nextId('testimonial-'),
+      author: 'Alejandro Jose Torres Valero',
+      role: 'Software Developer',
+      height: 41,
+      message:
+        'Williams is a great partner that is always trying to become the best of himself. He and I worked together doing some projects in Javascript and React as students at Microverse, and he always showed professionalism, A person that is always listening to the problems of others and always trying to be a proactive person and has excellent skills in problem-solving',
+    },
+    {
+      id: nextId('testimonial-'),
+      author: 'Diego Yon',
+      role: 'Full stack developer',
+      height: 35,
+      message:
+        'It is my pleasure to recommend Williams. I have had the opportunity to work with him a couple of times now and I can say that he is a great teammate to have, very knowledgeable, and easy to work with. He not only gets the job done, but he also goes above and beyond in every project.',
+    },
+    {
+      id: nextId('testimonial-'),
+      author: 'Muhyideen Elias',
+      role: 'DevOps Engineer',
+      height: 41,
+      message:
+        'Williams is a great person and deeply creative I will say because he has a great eye for details. I worked with him for several weeks during microverse training. I am always inspired by his decision to be a full-stack developer because of his previous background. And he has this tenacity for seeing things through and having very good interpersonal relationship skills.',
+    },
+  ],
 };
 
 export default state;
