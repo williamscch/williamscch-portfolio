@@ -140,6 +140,8 @@ const NavContainer = styled.nav`
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    color: var(--title);
+    font-weight: 500;
   }
 
   .nav-item,

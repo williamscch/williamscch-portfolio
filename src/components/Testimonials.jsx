@@ -116,11 +116,11 @@ const TestimonialsContainer = styled.section`
     padding: 7rem 0;
 
     .content {
-      padding: 0 3rem;
+      padding: 0 6rem;
     }
 
     .carousel-root {
-      margin: 0 6rem;
+      margin: 0 2rem;
       padding: 0 1rem;
     }
   }
