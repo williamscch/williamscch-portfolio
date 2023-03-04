@@ -121,6 +121,21 @@ const SkillsContainer = styled.section`
       }
     }
   }
+  @media only screen and (min-width: 641px) {
+    padding: 6rem 0;
+    .container {
+      grid-template-columns: 33% 33% 33%;
+      margin: 0 2rem;
+      padding: 0 1rem;
+    }
+  }
+
+  @media only screen and (min-width: 1008px) {
+    padding: 7rem 0;
+    .container {
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+  }
 `;
 
 export default Skills;
