@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-import meImg from '../assets/img/blue-pic.png';
+import meImg from '../assets/img/about-img.svg';
 
 const About = () => {
   const { about } = useSelector((state) => state);
