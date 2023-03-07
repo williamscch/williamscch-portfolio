@@ -1,36 +1,51 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
+import { useSelector } from 'react-redux';
 import heroImg from '../assets/img/home-img.svg';
 
-const Home = () => (
-  <HomeContainer id="home">
-    <section className="bg">
-      <div className="image">
-        <img src={heroImg} alt="hero-williams" />
-      </div>
-      <div className="blur">
-        <div className="content">
-          <h1>I&apos;m Williams Colmenares</h1>
-          <p>A Full-Stack Web Developer Based on Venezuela</p>
-          <button type="button">
-            <Link
-              to="portfolio"
-              spy
-              smooth
-              hashSpy
-              offset={-80}
-              delay={200}
-              duration={600}
-            >
-              Portfolio
-            </Link>
-          </button>
+const Home = () => {
+  const { social } = useSelector((state) => state.contact);
+
+  return (
+    <HomeContainer id="home">
+      <section className="bg">
+        <div className="image">
+          <img src={heroImg} alt="hero-williams" />
         </div>
-      </div>
-    </section>
-  </HomeContainer>
-);
+        <div className="blur">
+          <div className="content">
+            <h1>I&apos;m Williams Colmenares</h1>
+            <p>A Full-Stack Web Developer Based on Venezuela</p>
+            <ul>
+              {social.map((s) => (
+                <li key={s.id}>
+                  <a href={s.url} target="_blank" rel="noreferrer">
+                    <i className={s.icon} />
+                    {' '}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button type="button">
+              <Link
+                to="portfolio"
+                spy
+                smooth
+                hashSpy
+                offset={40}
+                delay={200}
+                duration={600}
+              >
+                Portfolio
+              </Link>
+            </button>
+          </div>
+        </div>
+      </section>
+    </HomeContainer>
+  );
+};
 
 const HomeContainer = styled.section`
   min-height: 100vh;
@@ -76,6 +91,36 @@ const HomeContainer = styled.section`
           color: var(--title);
           font-size: 1.3rem;
           margin: 0 0 1rem;
+        }
+
+        ul {
+          display: flex;
+          padding: 0;
+          gap: 1rem;
+
+          li {
+            list-style: none;
+            transition: transform 0.5s;
+
+            a {
+              color: var(--text);
+              font-size: 1.5rem;
+              transition: transform 2s;
+            }
+
+            a:hover {
+              color: var(--title);
+              transform: scale(2);
+            }
+
+            a:active {
+              color: var(--green);
+            }
+          }
+
+          li:hover {
+            transform: scale(1.5);
+          }
         }
       }
     }
