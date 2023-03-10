@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
-import Burger from './Burger';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
-const Nav = () => {
-  const [clicked, setCLicked] = useState(false);
+const Nav = (props) => {
   const [scrolled, setScrolled] = useState(false);
-  const handleClick = () => {
-    setCLicked(!clicked);
-  };
+
+  const { handleClick, clicked, handleBodyScroll } = props;
 
   const handleScroll = () => {
     if (window.scrollY >= 64) {
@@ -22,11 +22,16 @@ const Nav = () => {
 
   return (
     <NavContainer>
-      <div className={scrolled ? 'nav scroll' : 'nav'}>
+      <nav className={scrolled ? 'nav scroll' : 'nav'}>
         <ul
           className={`links ${clicked ? 'active' : ''}`}
           onScroll={handleScroll}
         >
+          <li className="nav-item close">
+            <button type="button" onClick={handleClick} onKeyDown={handleClick}>
+              <FontAwesomeIcon icon={faXmark} className="x-mark" />
+            </button>
+          </li>
           <li className="nav-item">
             <Link to="home" spy hashSpy smooth delay={200} duration={600}>
               Home
@@ -58,7 +63,7 @@ const Nav = () => {
               About
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item me">
             <a href="/" className="me">
               Me.
             </a>
@@ -103,24 +108,46 @@ const Nav = () => {
             </Link>
           </li>
         </ul>
-        <div className="burger">
-          <Burger clicked={clicked} handleClick={handleClick} />
-        </div>
-      </div>
+        <ul className="burger">
+          <li className="burger-item">
+            <a href="/">Me.</a>
+          </li>
+          <li className="burger-item">
+            <button
+              onClick={() => {
+                handleClick();
+                handleBodyScroll();
+              }}
+              onKeyDown={handleClick}
+              type="button"
+            >
+              <FontAwesomeIcon icon={faBars} className="burger-bars" />
+            </button>
+          </li>
+        </ul>
+      </nav>
     </NavContainer>
   );
 };
 
-const NavContainer = styled.nav`
+Nav.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+  handleBodyScroll: PropTypes.func.isRequired,
+  clicked: PropTypes.bool.isRequired,
+};
+
+const NavContainer = styled.header`
   .nav {
     background-color: transparent;
     position: fixed;
+    top: 0;
     width: 100%;
-    height: 4rem;
+    height: 5.5rem;
     display: flex;
     align-items: center;
-    transition: 0.5s;
+    transition: 0.5s all ease;
     z-index: 999;
+    padding: 1.5rem 0;
   }
 
   .nav:hover {
@@ -129,84 +156,96 @@ const NavContainer = styled.nav`
     box-shadow: 4px 0 20px -5px rgb(0 0 0 / 10%);
   }
 
-  .scroll {
+  .nav.scroll {
     background-color: white;
     border-bottom: rgba(255, 255, 255, 0.7);
     box-shadow: 4px 0 20px -5px rgb(0 0 0 / 10%);
-    height: 3rem;
+    height: 3.7rem;
   }
 
-  .links {
+  .burger {
     display: flex;
-    justify-content: space-evenly;
     width: 100%;
-    color: var(--title);
-    font-weight: 500;
-  }
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 
-  .nav-item,
-  .me {
-    text-decoration: none;
-    list-style: none;
-    font-size: 1rem;
-    cursor: pointer;
-  }
+    .burger-item {
+      list-style: none;
 
-  .nav-item .active {
-    color: var(--green);
-  }
+      a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: var(--green);
+      }
 
-  .nav-item:hover {
-    color: var(--green);
-  }
+      a:active {
+        color: var(--title);
+      }
 
-  .me:visited {
-    color: var(--green);
-  }
+      button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
 
-  .me:hover {
-    color: var(--title);
-  }
-
-  .me {
-    font-size: 1.5rem;
-    color: var(--green);
+        .burger-bars {
+          color: var(--title);
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 
   .links {
-    position: absolute;
-    top: -700px;
-    left: -2000px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    position: fixed;
+    top: 0;
+    right: -2000px;
     display: flex;
-    align-items: center;
-    a {
-      display: block;
+    flex-direction: column;
+    width: 19rem;
+    background-color: var(--white);
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1.5rem 9.5rem;
+    transition: 0.5s all ease-in-out;
+
+    .nav-item {
+      list-style: none;
+      font-size: 1.25rem;
+      padding: 0.625rem 1.25rem;
+      color: var(--btn-hover);
     }
-    @media (min-width: 768px) {
-      position: initial;
-      margin: 0;
+
+    .nav-item .active {
+      color: var(--green);
+    }
+
+    .nav-item.close {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        .x-mark {
+          color: var(--title);
+          font-size: var(--fs-title);
+        }
+      }
+    }
+
+    .nav-item.me {
+      display: none;
     }
   }
 
   .links.active {
-    width: 100%;
-    display: block;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top: 30%;
-    left: 0;
     right: 0;
-    text-align: center;
-  }
-
-  .burger {
-    @media (min-width: 768px) {
-      display: none;
-    }
+    transition: 0.5s all ease-in-out;
   }
 `;
 
