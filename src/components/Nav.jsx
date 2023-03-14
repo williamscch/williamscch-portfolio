@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 const Nav = (props) => {
   const [scrolled, setScrolled] = useState(false);
 
-  const { handleClick, clicked, handleBodyScroll } = props;
+  const { handleClick, clicked } = props;
 
   const handleScroll = () => {
     if (window.scrollY >= 64) {
@@ -39,6 +39,7 @@ const Nav = (props) => {
           </li>
           <li className="nav-item">
             <Link
+              onClick={handleClick}
               to="services"
               spy
               hashSpy
@@ -52,6 +53,7 @@ const Nav = (props) => {
           </li>
           <li className="nav-item">
             <Link
+              onClick={handleClick}
               to="about"
               spy
               hashSpy
@@ -70,6 +72,7 @@ const Nav = (props) => {
           </li>
           <li className="nav-item">
             <Link
+              onClick={handleClick}
               to="portfolio"
               spy
               smooth
@@ -83,6 +86,7 @@ const Nav = (props) => {
           </li>
           <li className="nav-item">
             <Link
+              onClick={handleClick}
               to="skills"
               spy
               hashSpy
@@ -96,6 +100,7 @@ const Nav = (props) => {
           </li>
           <li className="nav-item">
             <Link
+              onClick={handleClick}
               to="contact"
               spy
               hashSpy
@@ -113,14 +118,7 @@ const Nav = (props) => {
             <a href="/">Me.</a>
           </li>
           <li className="burger-item">
-            <button
-              onClick={() => {
-                handleClick();
-                handleBodyScroll();
-              }}
-              onKeyDown={handleClick}
-              type="button"
-            >
+            <button onClick={handleClick} onKeyDown={handleClick} type="button">
               <FontAwesomeIcon icon={faBars} className="burger-bars" />
             </button>
           </li>
@@ -132,7 +130,6 @@ const Nav = (props) => {
 
 Nav.propTypes = {
   handleClick: PropTypes.func.isRequired,
-  handleBodyScroll: PropTypes.func.isRequired,
   clicked: PropTypes.bool.isRequired,
 };
 
