@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +8,7 @@ import MobileMenu from './MobileMenu';
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [clicked, setCLicked] = useState(false);
+  const menuRef = useRef();
 
   const handleScroll = () => {
     if (window.scrollY >= 64) {
@@ -29,11 +30,20 @@ const Nav = () => {
     }
   };
 
-  const blurBodyBg = () => {
-    if (clicked) {
-      document.body.classList.add('blur');
-    }
-  };
+  useEffect(() => {
+    const handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setCLicked(false);
+        document.body.classList.remove('blur');
+      }
+    };
+
+    document.addEventListener('mousedown', handler);
+
+    return () => {
+      document.removeEventListener('mousedown', handler);
+    };
+  }, []);
 
   return (
     <NavContainer>
@@ -109,20 +119,17 @@ const Nav = () => {
             </Link>
           </li>
           <li className="burger-item">
-            <button
-              onClick={() => {
-                handleClick();
-                blurBodyBg();
-              }}
-              onKeyDown={handleClick}
-              type="button"
-            >
+            <button onClick={handleClick} onKeyDown={handleClick} type="button">
               <FontAwesomeIcon icon={faBars} className="burger-bars" />
             </button>
           </li>
         </ul>
       </nav>
-      <MobileMenu clicked={clicked} handleClick={handleClick} />
+      <MobileMenu
+        clicked={clicked}
+        handleClick={handleClick}
+        reference={menuRef}
+      />
     </NavContainer>
   );
 };

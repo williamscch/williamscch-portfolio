@@ -5,9 +5,9 @@ import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 
-const MobileMenu = ({ clicked, handleClick }) => (
+const MobileMenu = ({ clicked, handleClick, reference }) => (
   <MobileMenuContainer>
-    <ul className={`links ${clicked ? 'active' : ''}`}>
+    <ul className={`links ${clicked ? 'active' : ''}`} ref={reference}>
       <li className="nav-item close">
         <button type="button" onClick={handleClick} onKeyDown={handleClick}>
           <FontAwesomeIcon icon={faXmark} className="x-mark" />
@@ -98,6 +98,8 @@ const MobileMenu = ({ clicked, handleClick }) => (
 MobileMenu.propTypes = {
   clicked: PropTypes.bool.isRequired,
   handleClick: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  reference: PropTypes.object.isRequired,
 };
 
 const MobileMenuContainer = styled.div`
