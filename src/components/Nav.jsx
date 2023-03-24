@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import PropTypes from 'prop-types';
 
-const Nav = (props) => {
+const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [clicked, setCLicked] = useState(false);
 
-  const { handleClick, clicked } = props;
+  useEffect(() => {
+    document.body.addEventListener('click', setCLicked);
+
+    return function cleanup() {
+      window.removeEventListener('click', setCLicked);
+    };
+  }, []);
 
   const handleScroll = () => {
     if (window.scrollY >= 64) {
@@ -19,6 +25,22 @@ const Nav = (props) => {
   };
 
   window.addEventListener('scroll', handleScroll);
+
+  const handleClick = () => {
+    setCLicked(!clicked);
+
+    if (!clicked) {
+      document.body.classList.add('blur');
+    } else {
+      document.body.classList.remove('blur');
+    }
+  };
+
+  const blurBodyBg = () => {
+    if (clicked) {
+      document.body.classList.add('blur');
+    }
+  };
 
   return (
     <NavContainer>
@@ -89,111 +111,107 @@ const Nav = (props) => {
             </Link>
           </li>
           <li className="bar-item">
-            <Link
-              to="contact"
-              spy
-              hashSpy
-              smooth
-              delay={200}
-              duration={600}
-            >
+            <Link to="contact" spy hashSpy smooth delay={200} duration={600}>
               Contact
             </Link>
           </li>
           <li className="burger-item">
-            <button onClick={handleClick} onKeyDown={handleClick} type="button">
+            <button
+              onClick={() => {
+                handleClick();
+                blurBodyBg();
+              }}
+              onKeyDown={handleClick}
+              type="button"
+            >
               <FontAwesomeIcon icon={faBars} className="burger-bars" />
             </button>
           </li>
         </ul>
-        <ul
-          className={`links ${clicked ? 'active' : ''}`}
-          onScroll={handleScroll}
-        >
-          <li className="nav-item close">
-            <button type="button" onClick={handleClick} onKeyDown={handleClick}>
-              <FontAwesomeIcon icon={faXmark} className="x-mark" />
-            </button>
-          </li>
-          <li className="nav-item">
-            <Link to="home" spy hashSpy smooth delay={200} duration={600}>
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              onClick={handleClick}
-              to="services"
-              spy
-              hashSpy
-              smooth
-              delay={200}
-              duration={600}
-            >
-              Services
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              onClick={handleClick}
-              to="about"
-              spy
-              hashSpy
-              smooth
-              delay={200}
-              duration={600}
-            >
-              About
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              onClick={handleClick}
-              to="portfolio"
-              spy
-              smooth
-              hashSpy
-              delay={200}
-              duration={600}
-            >
-              Portfolio
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              onClick={handleClick}
-              to="skills"
-              spy
-              hashSpy
-              smooth
-              delay={200}
-              duration={600}
-            >
-              Skills
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              onClick={handleClick}
-              to="contact"
-              spy
-              hashSpy
-              smooth
-              delay={200}
-              duration={600}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
       </nav>
+
+      <ul
+        className={`links ${clicked ? 'active' : ''}`}
+        onScroll={handleScroll}
+      >
+        <li className="nav-item close">
+          <button type="button" onClick={handleClick} onKeyDown={handleClick}>
+            <FontAwesomeIcon icon={faXmark} className="x-mark" />
+          </button>
+        </li>
+        <li className="nav-item">
+          <Link to="home" spy hashSpy smooth delay={200} duration={600}>
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            onClick={handleClick}
+            to="services"
+            spy
+            hashSpy
+            smooth
+            delay={200}
+            duration={600}
+          >
+            Services
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            onClick={handleClick}
+            to="about"
+            spy
+            hashSpy
+            smooth
+            delay={200}
+            duration={600}
+          >
+            About
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            onClick={handleClick}
+            to="portfolio"
+            spy
+            smooth
+            hashSpy
+            delay={200}
+            duration={600}
+          >
+            Portfolio
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            onClick={handleClick}
+            to="skills"
+            spy
+            hashSpy
+            smooth
+            delay={200}
+            duration={600}
+          >
+            Skills
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            onClick={handleClick}
+            to="contact"
+            spy
+            hashSpy
+            smooth
+            delay={200}
+            duration={600}
+          >
+            Contact
+          </Link>
+        </li>
+      </ul>
     </NavContainer>
   );
-};
-
-Nav.propTypes = {
-  handleClick: PropTypes.func.isRequired,
-  clicked: PropTypes.bool.isRequired,
 };
 
 const NavContainer = styled.header`
@@ -275,6 +293,8 @@ const NavContainer = styled.header`
     margin: 0;
     padding: 2rem 1.5rem 9.5rem;
     transition: 0.5s all ease-in-out;
+    z-index: 2000;
+    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
 
     .nav-item {
       list-style: none;
@@ -330,8 +350,8 @@ const NavContainer = styled.header`
       }
 
       .bar-item .active {
-      color: var(--green);
-    }
+        color: var(--green);
+      }
     }
   }
 `;
