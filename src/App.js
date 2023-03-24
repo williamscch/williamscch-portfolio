@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { disableBodyScroll } from 'body-scroll-lock';
 import Home from './components/Home';
 import Nav from './components/Nav';
 import Services from './components/Services';
@@ -16,16 +15,9 @@ const App = () => {
     setCLicked(!clicked);
   };
 
-  const handleBodyScroll = () => {
-    const target = document.querySelector('body');
-    if (clicked) {
-      disableBodyScroll(target);
-    }
-  };
-
   return (
     <div className={`wrapper ${clicked ? 'no-scroll' : ''}`}>
-      <Nav handleClick={handleClick} handleScroll={handleBodyScroll} clicked={clicked} />
+      <Nav handleClick={handleClick} clicked={clicked} />
       <Home />
       <Services />
       <About />

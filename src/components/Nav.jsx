@@ -23,6 +23,89 @@ const Nav = (props) => {
   return (
     <NavContainer>
       <nav className={scrolled ? 'nav scroll' : 'nav'}>
+        <ul className="bar">
+          <li className="bar-item">
+            <Link to="home" spy hashSpy smooth delay={200} duration={600}>
+              Home
+            </Link>
+          </li>
+          <li className="bar-item">
+            <Link
+              to="services"
+              spy
+              hashSpy
+              smooth
+              offset={40}
+              delay={200}
+              duration={600}
+            >
+              Services
+            </Link>
+          </li>
+          <li className="bar-item">
+            <Link
+              to="about"
+              spy
+              hashSpy
+              smooth
+              offset={40}
+              delay={200}
+              duration={600}
+            >
+              About
+            </Link>
+          </li>
+          <li className="burger-item bar-item me">
+            <a href="/" className="me">
+              Me.
+            </a>
+          </li>
+          <li className="bar-item">
+            <Link
+              to="portfolio"
+              spy
+              smooth
+              hashSpy
+              offset={40}
+              delay={200}
+              duration={600}
+              isDynamic
+            >
+              Portfolio
+            </Link>
+          </li>
+          <li className="bar-item">
+            <Link
+              to="skills"
+              spy
+              hashSpy
+              smooth
+              offset={40}
+              delay={200}
+              duration={600}
+              isDynamic
+            >
+              Skills
+            </Link>
+          </li>
+          <li className="bar-item">
+            <Link
+              to="contact"
+              spy
+              hashSpy
+              smooth
+              delay={200}
+              duration={600}
+            >
+              Contact
+            </Link>
+          </li>
+          <li className="burger-item">
+            <button onClick={handleClick} onKeyDown={handleClick} type="button">
+              <FontAwesomeIcon icon={faBars} className="burger-bars" />
+            </button>
+          </li>
+        </ul>
         <ul
           className={`links ${clicked ? 'active' : ''}`}
           onScroll={handleScroll}
@@ -44,7 +127,6 @@ const Nav = (props) => {
               spy
               hashSpy
               smooth
-              offset={40}
               delay={200}
               duration={600}
             >
@@ -58,17 +140,11 @@ const Nav = (props) => {
               spy
               hashSpy
               smooth
-              offset={10}
               delay={200}
               duration={600}
             >
               About
             </Link>
-          </li>
-          <li className="nav-item me">
-            <a href="/" className="me">
-              Me.
-            </a>
           </li>
           <li className="nav-item">
             <Link
@@ -77,7 +153,6 @@ const Nav = (props) => {
               spy
               smooth
               hashSpy
-              offset={40}
               delay={200}
               duration={600}
             >
@@ -91,7 +166,6 @@ const Nav = (props) => {
               spy
               hashSpy
               smooth
-              offset={-40}
               delay={200}
               duration={600}
             >
@@ -105,22 +179,11 @@ const Nav = (props) => {
               spy
               hashSpy
               smooth
-              offset={20}
               delay={200}
               duration={600}
             >
               Contact
             </Link>
-          </li>
-        </ul>
-        <ul className="burger">
-          <li className="burger-item">
-            <a href="/">Me.</a>
-          </li>
-          <li className="burger-item">
-            <button onClick={handleClick} onKeyDown={handleClick} type="button">
-              <FontAwesomeIcon icon={faBars} className="burger-bars" />
-            </button>
           </li>
         </ul>
       </nav>
@@ -160,7 +223,7 @@ const NavContainer = styled.header`
     height: 3.7rem;
   }
 
-  .burger {
+  .bar {
     display: flex;
     width: 100%;
     padding: 0;
@@ -169,8 +232,13 @@ const NavContainer = styled.header`
     justify-content: center;
     gap: 2rem;
 
+    .bar-item {
+      display: none;
+    }
+
     .burger-item {
       list-style: none;
+      display: block;
 
       a {
         text-decoration: none;
@@ -234,15 +302,37 @@ const NavContainer = styled.header`
         }
       }
     }
-
-    .nav-item.me {
-      display: none;
-    }
   }
 
   .links.active {
     right: 0;
     transition: 0.5s all ease-in-out;
+  }
+
+  @media only screen and (min-width: 641px) {
+  }
+
+  @media only screen and (min-width: 1008px) {
+    .bar {
+      gap: 3.5rem;
+      .burger-item {
+        display: none;
+      }
+      .bar-item {
+        display: block;
+        list-style: none;
+        color: var(--navbar-links);
+        cursor: pointer;
+      }
+
+      .bar-item:hover {
+        color: var(--green);
+      }
+
+      .bar-item .active {
+      color: var(--green);
+    }
+    }
   }
 `;
 
