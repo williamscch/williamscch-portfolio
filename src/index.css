@@ -27,7 +27,7 @@ body {
 }
 
 body::after {
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 body.blur {
@@ -42,7 +42,7 @@ body.blur::after {
   top: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.2)
+  background: rgba(0, 0, 0, 0.2);
 }
 
 h1,
