@@ -63,7 +63,7 @@ const HomeContainer = styled.section`
 
       img {
         position: absolute;
-        left: -137%;
+        left: -115%;
         top: 5%;
         object-fit: cover;
         height: 115%;
