@@ -152,34 +152,3 @@ const AboutContainer = styled.section`
 `;
 
 export default About;
-
-// min-height: 100vh;
-// max-height: 100vh;
-// padding: 90px 6rem;
-// display: none;
-
-// .title {
-//   text-align: start;
-//   width: 20%;
-//   border-bottom: 2px solid var(--green);
-//   margin-bottom: 2rem;
-// }
-// .content {
-//   display: grid;
-//   grid-template-columns: 30% 40% 30%;
-
-//   img {
-//     width: 55%;
-//     align-self: flex-end;
-//     justify-self: center;
-//   }
-//   .last-column {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-
-//     button {
-//       width: 10rem;
-//     }
-//   }
-// }
