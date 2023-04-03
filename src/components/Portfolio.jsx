@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import Modal from './Modal';
 // import Project from './Project';
 
 const Portfolio = () => {
   const { portfolio } = useSelector((state) => state);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <PortfolioContainer id="portfolio">
@@ -20,6 +26,14 @@ const Portfolio = () => {
                 backgroundImage: `url(${project.image})`,
               }}
             />
+
+            <button type="button" onClick={() => setShowModal(true)}>
+              Open Modal
+            </button>
+            <Modal handleClose={handleCloseModal} show={showModal}>
+              <h1>Modal Content</h1>
+              <p>Here is some content for the modal.</p>
+            </Modal>
           </article>
         ))}
       </div>
