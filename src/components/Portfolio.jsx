@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-import Modal from './Modal';
+import Button from '@mui/material/Button';
+import ProjectModal from './ProjectModal';
+
 // import Project from './Project';
 
 const Portfolio = () => {
   const { portfolio } = useSelector((state) => state);
-  const [showModal, setShowModal] = useState(false);
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+  const [open, setOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState({});
 
   return (
     <PortfolioContainer id="portfolio">
@@ -20,20 +19,30 @@ const Portfolio = () => {
       <div className="projects-container">
         {portfolio.map((project) => (
           <article key={project.id}>
-            <div
+            <Button
+              onClick={() => {
+                setOpen(true);
+                setCurrentProject({
+                  id: project.id,
+                  title: project.title,
+                  description: project.description,
+                  image: project.image,
+                  source: project.source,
+                  live: project.live,
+                  languages: project.languages,
+                });
+              }}
               className="bg-container"
               style={{
                 backgroundImage: `url(${project.image})`,
               }}
             />
 
-            <button type="button" onClick={() => setShowModal(true)}>
-              Open Modal
-            </button>
-            <Modal handleClose={handleCloseModal} show={showModal}>
-              <h1>Modal Content</h1>
-              <p>Here is some content for the modal.</p>
-            </Modal>
+            <ProjectModal
+              open={open}
+              setOpen={setOpen}
+              project={currentProject}
+            />
           </article>
         ))}
       </div>

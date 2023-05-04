@@ -53,14 +53,14 @@ const state = {
   portfolio: [
     {
       id: nextId('project-'),
-      title: 'Space Travelers Hub',
+      title: 'Online Shop',
       description:
-        'Web App that shows real live data from the Space X API, useful information about rockets and missions as well counts with the functionality to join missions, reserve rockets, and those items reserved appears in your profile. Built with React and Redux toolkit',
-      languages: ['React', 'Redux', 'Javascript', 'Jest'],
-      live: 'https://spacetravelerswilliamscch.netlify.app/',
-      source: 'https://github.com/williamscch/space-travelers',
+        'Full Stack project made for an online shop, features like live render list of products products, filter for products by category, price and name, shopping cart to add products for registered users and place orders. Manager can also log in as an admin, with access to special functions like adding categories and products, as well as deleting and updating them, and managing users and customers.',
+      languages: ['Node', 'Express js', 'React', 'PostgreSQL'],
+      live: '/',
+      source: 'https://github.com/williamscch/myshop',
       image:
-        'https://raw.githubusercontent.com/williamscch/space-travelers/dev/src/components/images/screenshot-spaceX.png',
+        'https://raw.githubusercontent.com/williamscch/myshop-client/dev/app-ss.png',
     },
     {
       id: nextId('project-'),
@@ -79,7 +79,7 @@ const state = {
       description:
         'RoR Project that keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list',
       languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
-      live: '',
+      live: '/',
       source: 'https://github.com/williamscch/recipes_rails_app',
       image: '',
     },
@@ -89,7 +89,7 @@ const state = {
       description:
         'Mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
       languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
-      live: '',
+      live: '/',
       source: 'https://github.com/williamscch/budget_rails_app',
       image: '',
     },
@@ -98,7 +98,7 @@ const state = {
       title: 'Williams Blog',
       description: '',
       languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
-      live: '',
+      live: '/',
       source: 'https://github.com/williamscch/blog_rails_app',
       image: '',
     },
@@ -112,6 +112,17 @@ const state = {
       source: 'https://github.com/williamscch/forex-app',
       image:
         'https://raw.githubusercontent.com/williamscch/forex-app/dev/screenshot-fx-app.png',
+    },
+    {
+      id: nextId('project-'),
+      title: 'Space Travelers Hub',
+      description:
+        'Web App that shows real live data from the Space X API, useful information about rockets and missions as well counts with the functionality to join missions, reserve rockets, and those items reserved appears in your profile. Built with React and Redux toolkit',
+      languages: ['React', 'Redux', 'Javascript', 'Jest'],
+      live: 'https://spacetravelerswilliamscch.netlify.app/',
+      source: 'https://github.com/williamscch/space-travelers',
+      image:
+        'https://raw.githubusercontent.com/williamscch/space-travelers/dev/src/components/images/screenshot-spaceX.png',
     },
     {
       id: nextId('project-'),
