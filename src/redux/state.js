@@ -224,7 +224,7 @@ const state = {
     {
       id: nextId('testimonial-'),
       author: 'Luis Lara',
-      role: 'Ruby on Rails Developer',
+      role: 'Computer Systems Engineer',
       message:
         'Williams is a technology enthusiast. He always willing to learn new things. He works very well in a team, and adheres to the recommendations and procedures within an organization. He is an excellent professional, with great talent and potential, who works hard to achieve his goals. He is a very good worker: punctual, with initiative, intelligent, orderly and detail-oriented. We wish you much success in all the new work stages to come.',
     },

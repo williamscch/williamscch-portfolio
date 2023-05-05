@@ -46,9 +46,8 @@ const Portfolio = () => {
             </div>
           </Button>
         ))}
-
-        <ProjectModal open={open} setOpen={setOpen} project={currentProject} />
       </div>
+      <ProjectModal open={open} setOpen={setOpen} project={currentProject} />
     </PortfolioContainer>
   );
 };
