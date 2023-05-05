@@ -16,8 +16,8 @@ const ProjectModal = ({ open, setOpen, project }) => (
         <p>{project.description}</p>
       </DialogContent>
       <DialogActions>
-        <Link href={project.live}>Live</Link>
-        <Link href={project.source}>Source Code</Link>
+        <Link href={project.live} target="_blank">Live</Link>
+        <Link href={project.source} target="_blank">Source Code</Link>
       </DialogActions>
     </Dialog>
   </ProjectModalContainer>

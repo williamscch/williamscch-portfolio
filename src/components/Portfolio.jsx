@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
+import SearchIcon from '@mui/icons-material/Search';
 import ProjectModal from './ProjectModal';
-
-// import Project from './Project';
 
 const Portfolio = () => {
   const { portfolio } = useSelector((state) => state);
@@ -18,33 +17,37 @@ const Portfolio = () => {
       </div>
       <div className="projects-container">
         {portfolio.map((project) => (
-          <article key={project.id}>
-            <Button
-              onClick={() => {
-                setOpen(true);
-                setCurrentProject({
-                  id: project.id,
-                  title: project.title,
-                  description: project.description,
-                  image: project.image,
-                  source: project.source,
-                  live: project.live,
-                  languages: project.languages,
-                });
-              }}
-              className="bg-container"
+          <Button
+            onClick={() => {
+              setOpen(true);
+              setCurrentProject({
+                id: project.id,
+                title: project.title,
+                description: project.description,
+                image: project.image,
+                source: project.source,
+                live: project.live,
+                languages: project.languages,
+              });
+            }}
+            key={project.id}
+            className="parent"
+          >
+            <div
+              className="child"
               style={{
                 backgroundImage: `url(${project.image})`,
               }}
-            />
-
-            <ProjectModal
-              open={open}
-              setOpen={setOpen}
-              project={currentProject}
-            />
-          </article>
+            >
+              <span>
+                <SearchIcon />
+                {/* {project.title} */}
+              </span>
+            </div>
+          </Button>
         ))}
+
+        <ProjectModal open={open} setOpen={setOpen} project={currentProject} />
       </div>
     </PortfolioContainer>
   );
@@ -70,19 +73,56 @@ const PortfolioContainer = styled.section`
     grid-auto-rows: 9.5rem;
     place-content: center;
 
-    article {
-      display: flex;
-      justify-content: center;
-      padding: 0 1rem;
-      margin-bottom: 1.5rem;
+    .parent {
+      padding: 0;
+      margin: 0 1rem 1.5rem;
+      overflow: hidden;
 
-      .bg-container {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
+      .child {
         border-radius: 4px;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        background-position: top;
+        background-size: cover;
+        transition: all 0.5s;
       }
+    }
+
+    .parent:hover .child {
+      transform: scale(1.1);
+    }
+
+    .child::before {
+      content: "";
+      display: none;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .parent:hover .child:before,
+    .parent:focus .child:before {
+      display: block;
+    }
+
+    span {
+      color: white;
+      font-family: "Arbutus Slab", serif;
+      display: none;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .parent:hover span,
+    .parent:focus span {
+      display: grid;
+      place-items: center;
     }
   }
 
