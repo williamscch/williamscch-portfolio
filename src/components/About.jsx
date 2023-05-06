@@ -29,7 +29,7 @@ const About = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Get my Resume
+              My Resume
             </a>
           </button>
         </div>

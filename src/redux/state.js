@@ -66,9 +66,9 @@ const state = {
       id: nextId('project-'),
       title: 'Rental Cars',
       description:
-        'This project is made for the Renting of cars. You can add, reserve, and delete cars from our website! Built with React-Redux and Rails.',
-      languages: ['RoR', 'React', 'Capybara', 'PostgreSQL'],
-      live: 'https://639355566c9e9858f93bb1bb--bejewelled-cucurucho-3790b4.netlify.app/',
+        'This a Full-stack project made for a renting cars business. As user you can watch the cars available, check its specifications, select and reserve it, as well as cancel those reservations. Using the admin role you can manage the availability of cars, add new ones, edit and delete them. Built with React, Rails and Postgres stack.',
+      languages: ['Ruby on Rails', 'React', 'Capybara', 'PostgreSQL'],
+      live: 'https://rental-cars-williamscch.netlify.app/',
       source: 'https://github.com/williamscch/front_rental_cars',
       image:
         'https://raw.githubusercontent.com/williamscch/front_rental_cars/dev/app-ss.png',
@@ -77,8 +77,8 @@ const state = {
       id: nextId('project-'),
       title: 'Recipe App',
       description:
-        'RoR Project that keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list',
-      languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
+        'Ruby on Rails monolithic web application that keeps track of your cooking recipes, ingredients, and inventory. You can signup and login to use the app. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list of those ingredients you do not have in your inventory',
+      languages: ['Ruby on Rails', 'Rspec', 'Devise', 'Capybara', 'PostgreSQL'],
       live: '/',
       source: 'https://github.com/williamscch/recipes_rails_app',
       image: '',
@@ -88,7 +88,7 @@ const state = {
       title: 'My Spend Manager',
       description:
         'Mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
-      languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
+      languages: ['Ruby on Rails', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '/',
       source: 'https://github.com/williamscch/budget_rails_app',
       image: '',
@@ -97,18 +97,18 @@ const state = {
       id: nextId('project-'),
       title: 'Williams Blog',
       description: '',
-      languages: ['RoR', 'Rspec', 'Capybara', 'PostgreSQL'],
+      languages: ['Ruby on Rails', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '/',
       source: 'https://github.com/williamscch/blog_rails_app',
       image: '',
     },
     {
       id: nextId('project-'),
-      title: 'Forex App',
+      title: 'Forex Information App',
       description:
-        'Web APP Focused only on currency trading, covers some of the major currency pairs traded worldwide, such as EUR/USD, USD/JPY and GBP/USD.',
+        'Informative web application focused on currencies trading, covers some of the major currency pairs traded worldwide, such as EUR/USD, USD/JPY and GBP/USD.',
       languages: ['React', 'Redux', 'Javascript', 'Jest'],
-      live: 'https://forexappwilliamscch.netlify.app/',
+      live: 'https://forexapp-williamscch.netlify.app/',
       source: 'https://github.com/williamscch/forex-app',
       image:
         'https://raw.githubusercontent.com/williamscch/forex-app/dev/screenshot-fx-app.png',
@@ -118,8 +118,8 @@ const state = {
       title: 'Space Travelers Hub',
       description:
         'Web App that shows real live data from the Space X API, useful information about rockets and missions as well counts with the functionality to join missions, reserve rockets, and those items reserved appears in your profile. Built with React and Redux toolkit',
-      languages: ['React', 'Redux', 'Javascript', 'Jest'],
-      live: 'https://spacetravelerswilliamscch.netlify.app/',
+      languages: ['React', 'Redux toolkit', 'Javascript', 'Jest'],
+      live: 'https://spacetravelers-williamscch.netlify.app/',
       source: 'https://github.com/williamscch/space-travelers',
       image:
         'https://raw.githubusercontent.com/williamscch/space-travelers/dev/src/components/images/screenshot-spaceX.png',
@@ -128,8 +128,8 @@ const state = {
       id: nextId('project-'),
       title: 'TV Shows',
       description:
-        'TV Shows Web App - A web application based on an external API which contains information about TV shows. th web app let you like the shows that you like the most and comment what you think about them making use of an involvement API to save this interaction information.',
-      languages: ['Javascript', 'ES6', 'API', 'Jest'],
+        'Web application based on an external API which contains information about popular TV shows. This app let you like the shows that you like the most and comment what you think about them making it so interactive and uses an involvement API to save this interaction information.',
+      languages: ['Javascript', 'ES6', 'API utilization', 'Jest'],
       live: 'https://williamscch.github.io/tv-shows/dist/',
       source: 'https://github.com/williamscch/tv-shows',
       image:
@@ -140,8 +140,8 @@ const state = {
       title: 'Leader-board',
       description:
         'LeaderBoard web app that displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service',
-      languages: ['JavaScript', 'Webpack', 'API', 'CSS'],
-      live: 'https://leaderboardwilliamscch.netlify.app/',
+      languages: ['JavaScript', 'Webpack', 'API integration', 'CSS'],
+      live: 'https://leaderboard-williamscch.netlify.app/',
       source: 'https://github.com/williamscch/leaderboard',
       image:
         'https://raw.githubusercontent.com/williamscch/leaderboard/dev/mkleaderboardss.png',
@@ -151,7 +151,7 @@ const state = {
       title: 'Math Magicians',
       description: 'Calculator Web App build with React Components.',
       languages: ['JavaScript', 'React', 'CSS'],
-      live: 'https://williamscchmathmagicians.netlify.app/',
+      live: 'https://calculator-williamscch.netlify.app/',
       source: 'https://github.com/williamscch/math-magicians',
       image:
         'https://raw.githubusercontent.com/williamscch/math-magicians/development/app-ss.png',
@@ -171,7 +171,7 @@ const state = {
       id: nextId('project-'),
       title: 'Pizza Restaurant',
       description:
-        'A fully responsive page for a pizza restaurant, which contains the most important sections to be usefull, and also uses JavaScript to be a fully dinamic page.',
+        'A fully responsive page for a pizza restaurant, which contains the most important sections to be useful, and also uses JavaScript to be a fully dynamic page.',
       languages: ['Javascript', 'CSS', 'HTML'],
       live: 'https://williamscch.github.io/pizza-restaurant-page/',
       source: 'https://github.com/williamscch/pizza-restaurant-page',
