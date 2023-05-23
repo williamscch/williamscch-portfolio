@@ -12,7 +12,7 @@ const Footer = () => {
         <div>
           <h3>My Address</h3>
           <p>
-            Bolivar Main Street
+            Barrio Bolivar
             {' '}
             <br />
             San Cristobal, Tachira, Venezuela
@@ -27,7 +27,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                My Curriculum Vitae
+                My Resume
               </a>
             </li>
             <li>

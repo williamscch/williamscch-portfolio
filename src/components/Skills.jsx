@@ -20,6 +20,9 @@ import capybaraSquare from '../assets/img/17.svg';
 import codepenSquare from '../assets/img/18.svg';
 import jestSquare from '../assets/img/19.svg';
 import rspecSquare from '../assets/img/20.svg';
+import expressSquare from '../assets/img/21.svg';
+import dockerSquare from '../assets/img/22.svg';
+import awsSquare from '../assets/img/23.svg';
 
 const Skills = () => (
   <SkillsContainer id="skills">
@@ -69,6 +72,9 @@ const Skills = () => (
         <img src={nodejsSquare} alt="skill" />
       </div>
       <div className="square">
+        <img src={expressSquare} alt="skill" />
+      </div>
+      <div className="square">
         <img src={htmlSquare} alt="skill" />
       </div>
       <div className="square">
@@ -88,6 +94,12 @@ const Skills = () => (
       </div>
       <div className="square">
         <img src={rspecSquare} alt="skill" />
+      </div>
+      <div className="square">
+        <img src={dockerSquare} alt="skill" />
+      </div>
+      <div className="square">
+        <img src={awsSquare} alt="skill" />
       </div>
     </div>
   </SkillsContainer>

@@ -29,7 +29,7 @@ const About = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Get my CV
+              My Resume
             </a>
           </button>
         </div>
@@ -62,8 +62,8 @@ const AboutContainer = styled.section`
   .content {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 40% 30% 30%;
-    min-height: 92vh;
+    grid-auto-rows: auto;
+    gap: 0.7rem;
 
     .image {
       padding: 0 1rem;
@@ -144,42 +144,11 @@ const AboutContainer = styled.section`
       }
 
       p {
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size: 1rem;
+        line-height: 1.6;
       }
     }
   }
 `;
 
 export default About;
-
-// min-height: 100vh;
-// max-height: 100vh;
-// padding: 90px 6rem;
-// display: none;
-
-// .title {
-//   text-align: start;
-//   width: 20%;
-//   border-bottom: 2px solid var(--green);
-//   margin-bottom: 2rem;
-// }
-// .content {
-//   display: grid;
-//   grid-template-columns: 30% 40% 30%;
-
-//   img {
-//     width: 55%;
-//     align-self: flex-end;
-//     justify-self: center;
-//   }
-//   .last-column {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-
-//     button {
-//       width: 10rem;
-//     }
-//   }
-// }
