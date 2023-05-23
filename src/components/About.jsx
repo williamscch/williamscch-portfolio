@@ -62,8 +62,8 @@ const AboutContainer = styled.section`
   .content {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 40% 30% 30%;
-    min-height: 92vh;
+    grid-auto-rows: auto;
+    gap: 0.7rem;
 
     .image {
       padding: 0 1rem;
@@ -144,8 +144,8 @@ const AboutContainer = styled.section`
       }
 
       p {
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size: 1rem;
+        line-height: 1.6;
       }
     }
   }
