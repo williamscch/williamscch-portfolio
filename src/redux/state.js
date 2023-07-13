@@ -91,7 +91,7 @@ const state = {
       languages: ['Ruby on Rails', 'Rspec', 'Capybara', 'PostgreSQL'],
       live: '/',
       source: 'https://github.com/williamscch/budget_rails_app',
-      image: '',
+      image: 'https://github.com/williamscch/budget_rails_app/blob/dev/screenshots/ss8.png?raw=true',
     },
     {
       id: nextId('project-'),
